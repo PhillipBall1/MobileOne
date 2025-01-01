@@ -1,0 +1,53 @@
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(to bottom, black, transparent);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+.navbar-link {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: var(--fs-s);
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--colorC);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--colorC); /* Change text color */
+}
+
+.navbar-link:hover::after {
+  width: 100%; /* Expand the bar under the link */
+}

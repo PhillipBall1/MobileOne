@@ -1,0 +1,48 @@
+:root {
+  --colorA: #485079;
+  --colorB: #aff0ee;
+  --colorC: #AEC5EB;
+  --danger-color: #853840;
+  --success-color: #3b6b46;
+  --dark-text-color: #333;
+  --light-text-color: #ffffff;
+  --background-color: #fffbf2;
+
+  --main-text-shadow: 0.1rem 0.1rem 0.2rem black;
+
+  --fs-xxl: 4.5rem;
+  --fs-xl: 3.5rem;
+  --fs-lg: 2.5rem;
+  --fs-md: 2rem;
+  --fs-s:  1.5rem;
+  --fs-xs: 1rem;
+
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100svh;
+  width: 100%;
+  font-family:"Clarkson",Helvetica,sans-serif;
+}
+
+@media(max-width: 800px){
+  body{
+    --fs-xxl: 3.5rem;
+    --fs-xl: 3rem;
+    --fs-lg: 2rem;
+    --fs-md: 1.5rem;
+    --fs-s:  1rem;
+    --fs-xs: 0.5rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
