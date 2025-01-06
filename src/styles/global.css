@@ -1,12 +1,14 @@
 :root {
-  --colorA: #485079;
+  --colorA: #509acc;
   --colorB: #aff0ee;
-  --colorC: #AEC5EB;
+  --colorC: #92b0e0;
+  --colorD: #284d88;
   --danger-color: #853840;
   --success-color: #3b6b46;
-  --dark-text-color: #333;
+  --dark-text-color: #323233;
   --light-text-color: #ffffff;
-  --background-color: #fffbf2;
+  --background-color: #ffffff;
+  --dark-background-color: #000000;
 
   --main-text-shadow: 0.1rem 0.1rem 0.2rem black;
 
@@ -22,7 +24,7 @@
   overflow-y: auto;
   height: 100svh;
   width: 100%;
-  font-family:"Clarkson",Helvetica,sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media(max-width: 800px){
@@ -38,8 +40,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html, body {

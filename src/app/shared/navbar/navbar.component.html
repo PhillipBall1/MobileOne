@@ -1,9 +1,24 @@
-<nav class="navbar">
-  <img class="navbar-brand" src="assets/images/navLogo.png">
-  <ul class="navbar-links">
-    <li><a href="#" class="navbar-link">HOME</a></li>
-    <li><a href="#" class="navbar-link">ABOUT</a></li>
-    <li><a href="#" class="navbar-link">SERVICES</a></li>
-    <li><a href="#" class="navbar-link">CONTACT</a></li>
+<nav class="navbar" [ngClass]="{'hidden': !isNavbarVisible}">
+  <img class="navbar-brand" src="assets/images/navLogo.png" alt="Logo" />
+
+  <div class="navbar-toggle" (click)="toggleNavbar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="navbar-links" [ngClass]="{'active': isNavbarActive}">
+    <li><a routerLink="/" routerLinkActive="active" class="navbar-link">HOME</a></li>
+    <li><a routerLink="/services" routerLinkActive="active" class="navbar-link">SERVICES</a></li>
+    <li><a routerLink="/locations" routerLinkActive="active" class="navbar-link">LOCATIONS</a></li>
+    <li><a routerLink="/careers" routerLinkActive="active" class="navbar-link">CAREERS</a></li>
+    <li>
+      <a href="https://app.chartrequest.com/m/mobileonedocs" target="_blank" class="navbar-link">
+        RECORDS
+      </a>
+    </li>
+    <li><a routerLink="/login" routerLinkActive="active" class="navbar-link">LOGIN</a></li>
   </ul>
+
+
 </nav>

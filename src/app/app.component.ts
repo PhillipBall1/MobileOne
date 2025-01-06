@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router'; // Import RouterOutlet for routing functionality
-import { NavbarComponent } from './shared/navbar/navbar.component'; // Import your Navbar component
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { HomeComponent } from './features/home/home.component';
+import { HomeInfoComponent } from './features/home-info/home-info.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   template: `
-    <app-navbar></app-navbar>  <!-- Insert the Navbar component here -->
-    <router-outlet></router-outlet>  <!-- The router outlet for rendered components -->
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
   `,
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    HomeComponent,
+    HomeInfoComponent
+  ],
 })
 export class AppComponent {
   title(title: any)
