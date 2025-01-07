@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--colorB);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  gap: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.footer-column {
+  text-align: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text{
+  font-size: var(--fs-s);
+}
+
+.link{
+  font-size: var(--fs-xs);
+  padding: 0.5rem;
+
+}

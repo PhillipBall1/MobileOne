@@ -1,0 +1,63 @@
+.service-container{
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  color: var(--dark-text-color);
+
+  letter-spacing: 0.1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: var(--colorB);
+  bottom: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+}
+
+.carousel-container {
+  margin: 3rem;
+
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s linear;
+  will-change: transform;
+}
+
+.carousel-card {
+  min-width: 20rem;
+  min-height: 10rem;
+  margin: 0 10px;
+
+  box-shadow: var(--card-shadow);
+  background: linear-gradient(to bottom, var(--light-text-color), var(--colorB));
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.carousel-card h3{
+  color: var(--colorD);
+  font-size: var(--fs-s);
+}
+
+.carousel-card p{
+  color: var(--dark-text-color);
+  font-size: var(--fs-xs);
+}
+

@@ -1,0 +1,15 @@
+<div class="fade" appFadeIn>
+  <div class="service-container">
+    <div class="header-text">
+      Services We Provide
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-card" *ngFor="let card of cards">
+          <h3>{{ card.header }}</h3>
+          <p>{{ card.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

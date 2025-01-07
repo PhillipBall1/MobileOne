@@ -1,0 +1,47 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 86.9vh;
+}
+
+.content {
+  z-index: 1;
+  font-weight: 600;
+  color: var(--light-text-color);
+  text-align: center;
+  font-size: var(--fs-xxl);
+  text-shadow: var(--main-text-shadow);
+}
+
+.under-text {
+  z-index: 1;
+  color: var(--light-text-color);
+  text-align: center;
+  font-size: var(--fs-md);
+  text-shadow: var(--main-text-shadow);
+  margin-top: 1rem;
+}

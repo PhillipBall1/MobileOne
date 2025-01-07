@@ -1,0 +1,10 @@
+<div class="container fade" appFadeIn>
+  <div class="header-text">
+    Accepted Insurance
+  </div>
+  <div class="grid">
+    <div class="grid-item" *ngFor="let item of insurance">
+      <img [src]="item.image" [alt]="item.name" class="grid-image" />
+    </div>
+  </div>
+</div>

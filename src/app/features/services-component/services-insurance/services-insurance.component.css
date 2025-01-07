@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--light-text-color), var(--colorB));
+}
+
+.header-text {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  color: var(--dark-text-color);
+  letter-spacing: 0.1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: var(--colorD);
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Responsive column sizes */
+  gap: 1.5rem; /* Space between grid items */
+  justify-content: center;
+}
+
+.grid-item {
+  height: 6rem; /* Fixed height for all items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-bg-color);
+  border-radius: 0.5rem;
+
+}
+
+.grid-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}

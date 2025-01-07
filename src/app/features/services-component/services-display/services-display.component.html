@@ -1,0 +1,11 @@
+<div class="service-container fade" appFadeIn>
+  <div class="header-text">
+    Services
+  </div>
+  <div class="cards-grid">
+    <div class="service-card" *ngFor="let card of cards">
+      <h3 class="service-header">{{ card.header }}</h3>
+      <p class="service-description">{{ card.description }}</p>
+    </div>
+  </div>
+</div>

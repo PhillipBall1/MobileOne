@@ -1,0 +1,34 @@
+<div class="fade" appFadeIn>
+  <div class="info-container">
+    <div class="info-text">
+      Simplify Healthcare with Mobile One Docs
+    </div>
+    <div class="info-cards">
+      <div class="info-card">
+        <img src="assets/images/header-icon2.png" alt="Icon 1" class="card-icon">
+        <div class="info-card-header">Convenience</div>
+        <div class="info-card-text">
+          Skip the long waits and crowded hospitals by having a trusted mobile doctor come directly to your home,
+          offering personalized care at your convenience.
+        </div>
+
+      </div>
+      <div class="info-card" routerLink="/services" [ngClass]="{'clickable': hasRouterLink}">
+        <img src="assets/images/header-icon3.png" alt="Icon 2" class="card-icon">
+        <div class="info-card-header">Personalized care</div>
+        <div class="info-card-text">
+          Ensuring that your unique health needs are met with tailored treatments
+          and a doctor who truly understands your situation.
+        </div>
+      </div>
+
+      <div class="info-card" routerLink="/locations" [ngClass]="{'clickable': hasRouterLink}" >
+        <img src="assets/images/header-icon1.png" alt="Icon 3" class="card-icon">
+        <div class="info-card-header">Locations</div>
+        <div class="info-card-text">
+          We provide services in multiple regions, making quality healthcare accessible wherever you are.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
