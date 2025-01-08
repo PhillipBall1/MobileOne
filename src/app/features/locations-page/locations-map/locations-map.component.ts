@@ -42,7 +42,7 @@ export class LocationsMapComponent implements AfterViewInit {
       });
 
       const infoWindow = new google.maps.InfoWindow({
-        content: `<div style="font-size: 14px; font-weight: bold;">${city.name}</div><p>Mobile Practice Available.</p>`,
+        content: `<div style="font-size: 14px; font-weight: bold;">${city.name}</div><p>City covered.</p>`,
       });
 
       marker.addListener('click', () => {
@@ -59,27 +59,22 @@ export class LocationsMapComponent implements AfterViewInit {
       return;
     }
 
-    // Use Geocoder to find the location of the zip code
     this.geocoder.geocode({ address: zipCode }, (results, status) => {
       if (status === 'OK' && results && results[0]) {
         const location = results[0].geometry.location;
 
-        // Center the map on the zip code location
         this.map.setCenter(location);
         this.map.setZoom(12);
 
-        // Remove previous marker if it exists
         if (this.marker) {
           this.marker.setMap(null);
         }
 
-        // Add a new marker at the zip code location
         this.marker = new google.maps.Marker({
           map: this.map,
           position: location,
         });
 
-        // Add an InfoWindow for the marker
         const infoWindow = new google.maps.InfoWindow({
           content: `<div style="font-size: 14px; font-weight: bold;">Zip Code: ${zipCode}</div>`,
         });

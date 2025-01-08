@@ -1,0 +1,14 @@
+<div>
+  <div *ngIf="success; else failureTemplate">
+    <div class="success">
+      <div class="header-text">Application Submitted Successfully!</div>
+      <div class="under-text">Thank you for your application</div>
+    </div>
+  </div>
+  <ng-template #failureTemplate>
+    <div class="failed">
+      <div class="header-text">Application Failed to Submit</div>
+      <div class="under-text">Try again later!</div>
+    </div>
+  </ng-template>
+</div>

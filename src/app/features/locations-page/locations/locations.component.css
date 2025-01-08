@@ -35,6 +35,8 @@
   text-align: center;
   font-size: var(--fs-xxl);
   text-shadow: var(--main-text-shadow);
+  padding: 1rem;
+  background: radial-gradient(circle, var(--colorC), transparent);
 }
 
 .under-text {

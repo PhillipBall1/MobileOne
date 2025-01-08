@@ -1,0 +1,180 @@
+<div class="form-container">
+  <div class="header-text">
+    Application Form
+  </div>
+  <form #applicationForm="ngForm" (ngSubmit)="onSubmit(applicationForm)">
+    <div class="under-text">
+      {{ selectedJob.title }} - {{ selectedJob.type }}
+    </div>
+    <div class="section-header">Information</div>
+    <div class="input-header">
+      Full Name
+      <input type="text" class="text-input" placeholder="Name" required [(ngModel)]="formData.fullName" name="fullName" />
+    </div>
+    <div class="input-header">
+      Address
+      <input type="text" class="text-input" placeholder="Address" required [(ngModel)]="formData.address" name="address" />
+    </div>
+    <div class="input-header">
+      City
+      <input type="text" class="text-input" placeholder="City" required [(ngModel)]="formData.city" name="city" />
+    </div>
+    <div class="input-header">
+      State
+      <input type="text" class="text-input" placeholder="State" required [(ngModel)]="formData.state" name="state" />
+    </div>
+    <div class="input-header">
+      Zip
+      <input type="text" class="text-input" placeholder="Zip" required [(ngModel)]="formData.zip" name="zip" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" required [(ngModel)]="formData.phone" name="phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" required [(ngModel)]="formData.email" name="email" />
+    </div>
+
+    <div class="input-header">
+      Legally Authorized to Work in the United States
+      <div class="radio-buttons">
+        <label class="radio-button">
+          <input type="radio" name="authorized" value="Yes" required [(ngModel)]="formData.authorized" />
+          Yes
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="authorized" value="No" [(ngModel)]="formData.authorized" />
+          No
+        </label>
+      </div>
+    </div>
+    <div class="section-header">Education</div>
+    <div class="input-header">
+      Highest Level of Education Completed
+      <div class="radio-buttons">
+        <label class="radio-button">
+          <input type="radio" name="education" value="HighSchool" required [(ngModel)]="formData.education" />
+          High School Diploma / GED
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="education" value="Associates" [(ngModel)]="formData.education" />
+          Associate Degree
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="education" value="Bachelors" [(ngModel)]="formData.education" />
+          Bachelor's Degree
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="education" value="Masters" [(ngModel)]="formData.education" />
+          Master's Degree
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="education" value="Other" [(ngModel)]="formData.education" />
+          Other
+        </label>
+      </div>
+    </div>
+    <div class="input-header">
+      Name of Institution
+      <input type="text" class="text-input" placeholder="Institution" required [(ngModel)]="formData.institution" name="institution" />
+    </div>
+    <div class="input-header">
+      Field of Study
+      <input type="text" class="text-input" placeholder="Field" required [(ngModel)]="formData.fieldOfStudy" name="fieldOfStudy" />
+    </div>
+
+    <div class="section-header">Previous Employer</div>
+    <div class="input-header">
+      Employer Name
+      <input type="text" class="text-input" placeholder="Employer" required [(ngModel)]="formData.employer" name="employer" />
+    </div>
+    <div class="input-header">
+      Position Title
+      <input type="text" class="text-input" placeholder="Position" required [(ngModel)]="formData.positionTitle" name="positionTitle" />
+    </div>
+    <div class="input-header">
+      Reason for Leaving
+      <input type="text" class="text-input" placeholder="Reason" required [(ngModel)]="formData.reasonForLeaving" name="reasonForLeaving" />
+    </div>
+    <div class="input-header">
+      Responsibilities
+      <input type="text" class="text-input" placeholder="Responsibilities" required [(ngModel)]="formData.responsibilities" name="responsibilities" />
+    </div>
+
+    <div class="section-header">Skills & Qualifications</div>
+    <div class="input-header">
+      Please list any relevant skills, certificates, or training related to the position:
+      <textarea class="rich-text-input" rows="5" placeholder="Type here..." required [(ngModel)]="formData.skills" name="skills"></textarea>
+    </div>
+    <div class="section-header">Software Knowledge</div>
+    <div class="input-header">
+      Please list any software programs you are proficient in:
+      <textarea class="rich-text-input" rows="5" placeholder="Type here..." required [(ngModel)]="formData.software" name="software"></textarea>
+    </div>
+
+    <div class="section-header">References</div>
+    <div class="section-header">Reference 1 *</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" required [(ngModel)]="formData.references[0].name" name="reference1Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" required [(ngModel)]="formData.references[0].relationship" name="reference1Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" required [(ngModel)]="formData.references[0].phone" name="reference1Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" required [(ngModel)]="formData.references[0].email" name="reference1Email" />
+    </div>
+    <div class="section-header">Reference 2</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" [(ngModel)]="formData.references[1].name" name="reference2Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" [(ngModel)]="formData.references[1].relationship" name="reference2Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" [(ngModel)]="formData.references[1].phone" name="reference2Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" [(ngModel)]="formData.references[1].email" name="reference2Email" />
+    </div>
+    <div class="section-header">Reference 3</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" [(ngModel)]="formData.references[2].name" name="reference3Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" [(ngModel)]="formData.references[2].relationship" name="reference3Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" [(ngModel)]="formData.references[2].phone" name="reference3Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" [(ngModel)]="formData.references[2].email" name="reference3Email" />
+    </div>
+
+    <div class="section-header">Signature & Authorization</div>
+    <div class="input-header">
+      I certify that all information provided in this application is accurate and complete to the best of my knowledge.
+    </div>
+    <input type="text" class="text-input" placeholder="Signature" required [(ngModel)]="formData.signature" name="signature" />
+    <input type="date" class="text-input" placeholder="Date" required [(ngModel)]="formData.date" name="date" />
+
+    <div class="form-footer">
+      <button type="submit" class="submit-button">Submit</button>
+    </div>
+  </form>
+</div>

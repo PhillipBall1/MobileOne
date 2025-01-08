@@ -59,4 +59,14 @@ export class SharedService {
     { name: 'Cold Springs', coords: { lat: 39.7040, lng: -119.9800 } },
     { name: 'Sted', coords: { lat: 39.5910, lng: -119.7310 } },
   ];
+  jobs = [
+    { id: 1, title: 'Receptionist', location: 'Remote', type: 'Full-time',
+      description: 'This is the job descriptiion',
+      provider: false,
+    },
+    { id: 2, title: 'Medical Assistant coordinator', location: 'AZ / NV', type: 'Part-time',
+      description: '',
+      provider: true,
+     },
+  ];
 }

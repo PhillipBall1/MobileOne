@@ -1,0 +1,24 @@
+<div class="careers-container">
+  <div class="header-text">
+    Careers
+  </div>
+  <div class="job-list">
+    <div *ngFor="let job of jobs" class="job">
+      <div (click)="toggleJobDetails(job)" class="job-header">
+        <div class="job-title">{{ job.title }}</div>
+        <div class="job-info">{{ job.location }} - {{ job.type }}</div>
+      </div>
+
+      <!-- Job Details -->
+      <div *ngIf="selectedJob === job" class="job-details">
+        <p>{{ job.description }}</p>
+        <div *ngIf="selectedJob.provider === true">
+          <button [routerLink]="'/apply-provider'"  [state]="{ job: selectedJob }">Apply Now</button>
+        </div>
+        <div *ngIf="selectedJob.provider === false">
+          <button [routerLink]="'/apply'"  [state]="{ job: selectedJob }">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

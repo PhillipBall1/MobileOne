@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { HomeComponent } from './features/home-component/home/home.component';
-import { HomeInfoComponent } from './features/home-component/home-info/home-info.component';
-import { HomeServiceComponent } from './features/home-component/home-service/home-service.component';
+import { HomeComponent } from './features/home-page/home/home.component';
+import { HomeInfoComponent } from './features/home-page/home-info/home-info.component';
+import { HomeServiceComponent } from './features/home-page/home-service/home-service.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PrivacyPolicyComponent } from './features/footer-component/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './features/footer-component/terms-conditions/terms-conditions.component';
-import { LocationsMapComponent } from './features/locations-component/locations-map/locations-map.component';
-import { LocationsComponent } from './features/locations-component/locations/locations.component';
+import { LocationsMapComponent } from './features/locations-page/locations-map/locations-map.component';
+import { LocationsComponent } from './features/locations-page/locations/locations.component';
+import { CareersComponent } from './features/careers-page/careers/careers.component';
+import { CareersListingComponent } from './features/careers-page/careers-listing/careers-listing.component';
+import { CareersRegistrationComponent } from './features/careers-page/careers-registration/careers-registration.component';
+import { CareersRegistrationProviderComponent } from './features/careers-page/careers-registration-provider/careers-registration-provider.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -25,10 +30,27 @@ import { LocationsComponent } from './features/locations-component/locations/loc
     HomeServiceComponent,
     PrivacyPolicyComponent,
     TermsConditionsComponent,
+    CareersComponent,
+    CareersListingComponent,
+    CareersRegistrationComponent,
+    CareersRegistrationProviderComponent,
+    HttpClientModule ,
     HomeInfoComponent
   ],
 })
 export class AppComponent {
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+
   title(title: any)
   {
     throw new Error('Method not implemented.');

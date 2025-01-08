@@ -1,0 +1,99 @@
+.careers-container {
+  width: 100%;
+  padding: 2rem;
+}
+
+.header-text {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  color: var(--dark-text-color);
+  letter-spacing: 0.1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: var(--colorB);
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--light-text-color), var(--colorB));
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.job-title {
+  font-size: var(--fs-md);
+  font-weight: bold;
+  color: var(--colorD);
+  margin-bottom: 0.5rem;
+}
+
+.job-info {
+  font-size: var(--fs-s);
+  color: var(--dark-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.job-description {
+  font-size: var(--fs-xs);
+  color: var(--dark-text-color);
+}
+
+.job-details {
+
+  padding: 1rem;
+  background: var(--light-bg-color);
+  border-radius: 8px;
+
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-details p {
+  font-size: var(--fs-s);
+  color: var(--dark-text-color);
+
+}
+
+.job-details button {
+  background-color: var(--colorD);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--fs-s);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.job-details button:hover {
+  background-color: var(--colorA);
+}
