@@ -60,13 +60,86 @@ export class SharedService {
     { name: 'Sted', coords: { lat: 39.5910, lng: -119.7310 } },
   ];
   jobs = [
-    { id: 1, title: 'Receptionist', location: 'Remote', type: 'Full-time',
-      description: 'This is the job descriptiion',
-      provider: false,
+     {
+      id: 1,
+      title: 'Scheduling Coordinator',
+      location: 'Remote',
+      type: 'Full-time',
+      description: "As a Scheduling Coordinator, you will be responsible for coordinating home-based primary care appointments for our healthcare providers. This fully remote role requires strong communication skills, attention to detail, and experience with scheduling to ensure smooth patient care coordination.",
+      responsibilities: [
+        "Schedule and coordinate in-home primary care appointments for patients.",
+        "Communicate with patients, families, and healthcare providers to confirm appointment details.",
+        "Manage scheduling software and ensure accurate and timely scheduling of patient visits.",
+        "Resolve scheduling conflicts, cancellations, and rescheduling as necessary.",
+        "Collaborate with other departments and healthcare professionals to ensure smooth delivery of services."
+      ],
+      qualifications: [
+        "Mandatory: Prior experience in scheduling is required.",
+        "Experience with Electronic Health Records (EHRs) is strongly preferred.",
+        "Strong organizational skills and the ability to manage multiple tasks simultaneously.",
+        "Excellent verbal and written communication skills.",
+        "Proficient in using scheduling software and maintaining accurate records.",
+        "Empathetic, patient-focused mindset with the ability to handle sensitive information confidentially.",
+        "Ability to work independently and manage time effectively in a fully remote environment.",
+        "High school diploma or equivalent required; associate degree or higher in healthcare administration or related field preferred."
+      ],
+      benefits: [
+        "Competitive salary.",
+        "Flexible working hours.",
+        "Paid time off and holidays.",
+        "Opportunities for professional development and career growth.",
+        "Comprehensive health benefits package."
+      ],
+      provider: true
     },
-    { id: 2, title: 'Medical Assistant coordinator', location: 'AZ / NV', type: 'Part-time',
-      description: '',
-      provider: true,
-     },
+    {
+      id: 2,
+      title: 'Nurse Practitioner or Physician Assistant',
+      location: 'East Valley Phoenix',
+      type: 'Full-time',
+      description: "Join Our Outstanding Home-Based Primary Care Team! Are you a Physician Assistant or Nurse Practitioner seeking an exciting hybrid role with the best of both worlds—telehealth and in-person visits? Look no further! Our well-established and thriving Home-Based Primary Care (HBPC) practice is searching for a dedicated NP or PA to join our exceptional team.",
+      responsibilities: [
+        "Deliver compassionate, comprehensive care to patients in their homes and virtually.",
+        "Collaborate with a multidisciplinary team to ensure the highest quality care.",
+        "Build lasting relationships with patients and families in a hybrid setting."
+      ],
+      qualifications: [
+        "A licensed and experienced Nurse Practitioner or Physician Assistant with a passion for patient-centered care.",
+        "Adaptable, tech-savvy, and excited about blending telehealth with in-person care.",
+        "A team player who thrives in a positive and innovative environment."
+      ],
+      benefits: [
+        "$15,000 Sign-On Bonus!",
+        "Competitive reimbursement.",
+        "Flexible schedule to support work-life balance.",
+        "Growth-focused opportunities, with potential for shared success and leadership opportunities."
+      ],
+      provider: true
+    },
+    {
+      id: 3,
+      title: 'Medical Assistant/Receptionist',
+      location: 'Remote',
+      type: 'Full-time',
+      description: "Join our well-established mobile primary care practice as a Medical Assistant/Receptionist and become part of our thriving remote team! If you're a dynamic multitasker with a passion for helping others, this opportunity is for you.",
+      responsibilities: [
+        "Be the friendly first voice our patients hear—outstanding customer service is a must!",
+        "Triage calls expertly, ensuring patients are connected to the right care at the right time.",
+        "Work with multiple platforms, including EHR systems, VOIP tools, and team collaboration software.",
+        "Participate in daily remote group meetings to stay connected and aligned with our mission."
+      ],
+      qualifications: [
+        "Medical Assistant experience with excellent organizational and multitasking skills.",
+        "A tech-savvy problem solver who can seamlessly navigate EHR systems, VOIP platforms, and remote tools like Microsoft Teams or similar.",
+        "A self-starter with fantastic communication skills who thrives in a remote work environment.",
+        "A compassionate, patient-focused attitude with a drive to make every interaction a positive one."
+      ],
+      benefits: [
+        "Work from home—say goodbye to commutes and hello to flexibility!",
+        "Be part of a close-knit remote team that’s passionate about providing exceptional care.",
+        "Join a practice that truly cares about its patients and team members."
+      ],
+      provider: false
+    },
   ];
 }

@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container" *ngIf="!loading">
   <div class="header-text">
     Application Form
   </div>
@@ -177,4 +177,8 @@
       <button type="submit" class="submit-button">Submit</button>
     </div>
   </form>
+</div>
+<div *ngIf="loading" class="loading-overlay">
+  <div class="spinner"></div>
+  <p>Submitting your application, please wait...</p>
 </div>

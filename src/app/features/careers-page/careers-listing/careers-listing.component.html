@@ -1,7 +1,13 @@
 <div class="careers-container">
-  <div class="header-text">
-    Careers
+  <div class="header-text">Careers</div>
+
+  <div class="under-text">
+    We are a leading healthcare provider specializing in primary care
+    services delivered directly to patients in the comfort of their homes.
+    Our mission is to ensure quality and compassionate care that enhances the
+    well-being of those we serve.
   </div>
+
   <div class="job-list">
     <div *ngFor="let job of jobs" class="job">
       <div (click)="toggleJobDetails(job)" class="job-header">
@@ -9,14 +15,30 @@
         <div class="job-info">{{ job.location }} - {{ job.type }}</div>
       </div>
 
-      <!-- Job Details -->
       <div *ngIf="selectedJob === job" class="job-details">
         <p>{{ job.description }}</p>
-        <div *ngIf="selectedJob.provider === true">
-          <button [routerLink]="'/apply-provider'"  [state]="{ job: selectedJob }">Apply Now</button>
-        </div>
-        <div *ngIf="selectedJob.provider === false">
-          <button [routerLink]="'/apply'"  [state]="{ job: selectedJob }">Apply Now</button>
+
+        <h4>Responsibilities:</h4>
+        <ul>
+          <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+        </ul>
+
+        <h4>Qualifications:</h4>
+        <ul>
+          <li *ngFor="let qualification of job.qualifications">{{ qualification }}</li>
+        </ul>
+
+        <h4>Benefits:</h4>
+        <ul>
+          <li *ngFor="let benefit of job.benefits">{{ benefit }}</li>
+        </ul>
+        <div>
+          <button
+            [routerLink]="job.provider ? '/apply-provider' : '/apply'"
+            [state]="{ job: selectedJob }"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </div>

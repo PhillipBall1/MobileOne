@@ -17,6 +17,11 @@ export class BackendService {
         applicationDetails: application
     };
     return this.http.post(`${this.apiUrl}submit-application`, body);
-}
+  }
+
+  getMapsApiKey(): Observable<{ apiKey: string }> {
+    return this.http.get<{ apiKey: string }>(`${this.apiUrl}maps-key`);
+  }
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { SharedService } from '../../../shared/services/shared-service.service';
+import { BackendService } from '../../../services/backend.service';
 
 @Component({
   selector: 'app-locations-map',
@@ -13,12 +14,32 @@ export class LocationsMapComponent implements AfterViewInit {
   marker!: google.maps.Marker | null; // To store the marker
   cities: { name: string; coords: { lat: number; lng: number } }[] = [];
 
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService, private backendService: BackendService) {
     this.cities = this.sharedService.cities;
   }
 
-  ngAfterViewInit(): void {
-    this.initMap();
+  async ngAfterViewInit(): Promise<void> {
+    try {
+      await this.loadGoogleMapsApi();
+      this.initMap();
+    } catch (error) {
+      console.error('Failed to load Google Maps API:', error);
+      alert('Unable to load the map. Please try again later.');
+    }
+  }
+
+  private loadGoogleMapsApi(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCBgCWT4eFPYlQsc12x5ePn_L-zyma0gJ0&libraries=places`;
+      script.async = true;
+      script.defer = true;
+
+      script.onload = () => resolve();
+      script.onerror = (error) => reject(error);
+
+      document.head.appendChild(script);
+    });
   }
 
   initMap(): void {

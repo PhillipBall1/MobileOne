@@ -1,35 +1,46 @@
 .success{
   margin-top: 10rem;
   height: 70vh;
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
   text-align: center;
-  background: linear-gradient(to top, var(--success-color), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.63), transparent);
 }
 
 .failed{
   margin-top: 10rem;
   height: 70vh;
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
   text-align: center;
-  background: linear-gradient(to top, var(--danger-color), transparent);
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.63), transparent);
 }
 
 .header-text {
-  z-index: 1;
-  font-weight: 600;
-
   text-align: center;
-  font-size: var(--fs-xxl);
-  text-shadow: var(--main-text-shadow);
-  padding: 1rem;
+  padding-bottom: 3rem;
+  font-size: var(--fs-xl);
+  font-weight: bold;
 
+  letter-spacing: 0.1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: var(--colorB);
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
 }
 
 .under-text {
   z-index: 1;
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
   text-align: center;
   font-size: var(--fs-md);
-  text-shadow: var(--main-text-shadow);
   margin-top: 1rem;
 }

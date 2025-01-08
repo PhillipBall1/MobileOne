@@ -26,6 +26,12 @@
   border-radius: 0.2rem;
 }
 
+.under-text{
+  text-align: center;
+  padding: 2rem;
+  font-size: var(--fs-s);
+}
+
 .job-list {
   display: flex;
   flex-direction: column;
@@ -35,7 +41,7 @@
 .job {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, var(--light-text-color), var(--colorB));
+
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: var(--card-shadow);

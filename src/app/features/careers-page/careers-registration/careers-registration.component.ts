@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './careers-registration.component.css'
 })
 export class CareersRegistrationComponent {
+  loading: boolean = false;
 
   selectedJob: any = null;
 
@@ -45,13 +46,16 @@ export class CareersRegistrationComponent {
 
   onSubmit(form: any) {
     if (form.valid) {
+      this.loading = true;
       this.backendService.submitApplication('pball1346@gmail.com', this.formData).subscribe(
         (response) => {
           console.log('Application submitted successfully:', response);
+          this.loading = false;
           this.router.navigate(['/submitted'], { queryParams: { success: 'true' } });
         },
         (error) => {
           console.error('Error submitting application:', error);
+          this.loading = false;
           this.router.navigate(['/submitted'], { queryParams: { success: 'false' } });
         }
       );

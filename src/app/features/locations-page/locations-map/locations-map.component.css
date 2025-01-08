@@ -54,7 +54,7 @@
 .zip-input button {
   padding: 0.5rem 1rem;
   font-size: var(--fs-md);
-  background-color: var(--colorB);
+  background-color: var(--colorD);
   color: white;
   border: none;
   border-radius: 5px;
@@ -63,8 +63,7 @@
 }
 
 .zip-input button:hover {
-  background-color: var(--dark-text-color);
-  color: var(--colorB);
+  background-color: var(--colorA);
 }
 
 #map {
