@@ -90,7 +90,7 @@ export class SharedService {
         "Opportunities for professional development and career growth.",
         "Comprehensive health benefits package."
       ],
-      provider: true
+      provider: false
     },
     {
       id: 2,

@@ -47,7 +47,7 @@ export class CareersRegistrationComponent {
   onSubmit(form: any) {
     if (form.valid) {
       this.loading = true;
-      this.backendService.submitApplication('pball1346@gmail.com', this.formData).subscribe(
+      this.backendService.submitApplication('applicants@mobileonedocs.com', this.formData).subscribe(
         (response) => {
           console.log('Application submitted successfully:', response);
           this.loading = false;

@@ -14,6 +14,7 @@ import { CareersListingComponent } from './features/careers-page/careers-listing
 import { CareersRegistrationComponent } from './features/careers-page/careers-registration/careers-registration.component';
 import { CareersRegistrationProviderComponent } from './features/careers-page/careers-registration-provider/careers-registration-provider.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServicesViewComponent } from './features/services-page/services-view/services-view.component';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     CareersListingComponent,
     CareersRegistrationComponent,
     CareersRegistrationProviderComponent,
+    ServicesViewComponent,
     HttpClientModule ,
     HomeInfoComponent
   ],

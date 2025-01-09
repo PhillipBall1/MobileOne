@@ -13,10 +13,12 @@ import { CareersRegistrationComponent } from './app/features/careers-page/career
 import { CareersRegistrationProviderComponent } from './app/features/careers-page/careers-registration-provider/careers-registration-provider.component';
 import { provideHttpClient } from '@angular/common/http';
 import { CareersSubmittedComponent } from './app/features/careers-page/careers-submitted/careers-submitted.component';
+import { ServicesViewComponent } from './app/features/services-page/services-view/services-view.component';
 
 const routes = [
   { path: '', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'service-view', component: ServicesViewComponent },
   { path: 'locations', component: LocationsComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'login', component: LoginComponent },

@@ -1,0 +1,33 @@
+.header-text {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: var(--fs-xl);
+  font-weight: bold;
+  color: var(--dark-text-color);
+  letter-spacing: 0.1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: var(--colorB);
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+}
+
+.under-text{
+  text-align: left;
+  padding: 2rem;
+  font-size: var(--fs-s);
+}
+
+.under-under-text{
+  padding: 2rem;
+  font-size: var(--fs-s);
+}

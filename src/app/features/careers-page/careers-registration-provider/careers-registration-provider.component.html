@@ -1,1 +1,219 @@
-<p>careers-registration-provider works!</p>
+<div class="form-container" *ngIf="!loading">
+  <div class="header-text">
+    Application Form
+  </div>
+  <form #applicationForm="ngForm" (ngSubmit)="onSubmit(applicationForm)">
+    <div class="under-text">
+      {{ selectedJob.title }} - {{ selectedJob.type }}
+    </div>
+    <div class="section-header">Information</div>
+    <div class="input-header">
+      Full Name
+      <input type="text" class="text-input" placeholder="Name" required [(ngModel)]="formData.fullName" name="fullName" />
+    </div>
+    <div class="input-header">
+      Address
+      <input type="text" class="text-input" placeholder="Address" required [(ngModel)]="formData.address" name="address" />
+    </div>
+    <div class="input-header">
+      City
+      <input type="text" class="text-input" placeholder="City" required [(ngModel)]="formData.city" name="city" />
+    </div>
+    <div class="input-header">
+      State
+      <input type="text" class="text-input" placeholder="State" required [(ngModel)]="formData.state" name="state" />
+    </div>
+    <div class="input-header">
+      Zip
+      <input type="text" class="text-input" placeholder="Zip" required [(ngModel)]="formData.zip" name="zip" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" required [(ngModel)]="formData.phone" name="phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" required [(ngModel)]="formData.email" name="email" />
+    </div>
+
+    <div class="section-header">Professional Credentials</div>
+
+    <div class="input-header">
+      Nurse Practitioner License Number
+      <input type="text" class="text-input" placeholder="License Number" required [(ngModel)]="formData.npLicenseNumber" name="npLicenseNumber" />
+    </div>
+    <div class="input-header">
+      State(s) Licensed
+      <input type="text" class="text-input" placeholder="State License" required [(ngModel)]="formData.stateLicense" name="stateLicense" />
+    </div>
+    <div class="input-header">
+      Board Certification (e.g., FNP, AGNP, PMHNP)
+      <input type="text" class="text-input" placeholder="Board Certification" required [(ngModel)]="formData.boardCertification" name="boardCertification" />
+    </div>
+    <div class="input-header">
+      Years of Experience in Primary Care/Geriatrics
+      <input type="number" class="text-input" placeholder="Experience" required [(ngModel)]="formData.yearsOfExperience" name="yearsOfExperience" />
+    </div>
+    <div class="input-header">
+      Other Certifications (e.g., BLS, ACLS)
+      <input type="text" class="text-input" placeholder="Other" required [(ngModel)]="formData.otherCertifications" name="otherCertifications" />
+    </div>
+
+    <div class="section-header">Relevant Employer</div>
+    <div class="input-header">
+      Employer Name
+      <input type="text" class="text-input" placeholder="Employer" required [(ngModel)]="formData.employer" name="employer" />
+    </div>
+    <div class="input-header">
+      Position Title
+      <input type="text" class="text-input" placeholder="Position" required [(ngModel)]="formData.positionTitle" name="positionTitle" />
+    </div>
+    <div class="input-header">
+      Location
+      <input type="text" class="text-input" placeholder="Location" required [(ngModel)]="formData.positionLocation" name="positionLocation" />
+    </div>
+    <div class="input-header">
+      Responsibilities
+      <input type="text" class="text-input" placeholder="Responsibilities" required [(ngModel)]="formData.responsibilities" name="responsibilities" />
+    </div>
+    <div class="section-header">Professional Skills & Competencies</div>
+
+    <div class="input-header">
+      Please describe any specific skills, experiences, or areas of expertise that make you a
+      strong candidate for a home-based primary care role.
+      <textarea class="rich-text-input" rows="5" placeholder="Type here..." required [(ngModel)]="formData.skills" name="skills"></textarea>
+    </div>
+
+    <div class="section-header">Availability</div>
+    <div class="input-header">
+      Preferred Start Date
+      <input type="date" class="text-input" placeholder="StartDate" required [(ngModel)]="formData.startDate" name="startDate" />
+    </div>
+    <div class="input-header">
+      Are you available for part-time, full-time, or either?
+      <div class="radio-buttons">
+        <label class="radio-button">
+          <input type="radio" name="partTime" value="Part-Time" required [(ngModel)]="formData.partTime" />
+          Part-Time
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="fullTime" value="Full-Time" required [(ngModel)]="formData.fullTime" />
+          Full-Time
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="eitherTime" value="Either" required [(ngModel)]="formData.eitherTime" />
+          Either
+        </label>
+      </div>
+    </div>
+    <div class="input-header">
+      Preferred Work Hours (If Applicable)
+      <input type="text" class="text-input" placeholder="Hours" [(ngModel)]="formData.prefWorkHours" name="prefWorkHours" />
+    </div>
+
+
+    <div class="section-header">Travel & Technology</div>
+
+    <div class="input-header">
+      Are you comfortable traveling to patients’ homes within the region?
+      <div class="radio-buttons">
+        <label class="radio-button">
+          <input type="radio" name="travelComfortable" value="Yes" required [(ngModel)]="formData.travelComfortable" />
+          Yes
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="travelComfortable" value="No" required [(ngModel)]="formData.travelComfortable" />
+          No
+        </label>
+      </div>
+    </div>
+
+    <div class="input-header">
+      Are you comfortable using electronic health record (EHR) systems and telemedicine tools?
+      <div class="radio-buttons">
+        <label class="radio-button">
+          <input type="radio" name="technologyComfortable" value="Yes" required [(ngModel)]="formData.technologyComfortable" />
+          Yes
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="technologyComfortable" value="No" required [(ngModel)]="formData.technologyComfortable" />
+          No
+        </label>
+      </div>
+    </div>
+
+    <div class="input-header">
+      EHR Systems Experience (If Applicable)
+      <input type="text" class="text-input" placeholder="Systems Experience" [(ngModel)]="formData.systemsExperience" name="systemsExperience" />
+    </div>
+
+    <div class="section-header">References</div>
+    <div class="section-header">Reference 1 *</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" required [(ngModel)]="formData.references[0].name" name="reference1Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" required [(ngModel)]="formData.references[0].relationship" name="reference1Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" required [(ngModel)]="formData.references[0].phone" name="reference1Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" required [(ngModel)]="formData.references[0].email" name="reference1Email" />
+    </div>
+    <div class="section-header">Reference 2</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" [(ngModel)]="formData.references[1].name" name="reference2Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" [(ngModel)]="formData.references[1].relationship" name="reference2Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" [(ngModel)]="formData.references[1].phone" name="reference2Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" [(ngModel)]="formData.references[1].email" name="reference2Email" />
+    </div>
+    <div class="section-header">Reference 3</div>
+    <div class="input-header">
+      Name
+      <input type="text" class="text-input" placeholder="Name" [(ngModel)]="formData.references[2].name" name="reference3Name" />
+    </div>
+    <div class="input-header">
+      Relationship
+      <input type="text" class="text-input" placeholder="Relation" [(ngModel)]="formData.references[2].relationship" name="reference3Relationship" />
+    </div>
+    <div class="input-header">
+      Phone
+      <input type="text" class="text-input" placeholder="Phone" [(ngModel)]="formData.references[2].phone" name="reference3Phone" />
+    </div>
+    <div class="input-header">
+      Email
+      <input type="email" class="text-input" placeholder="Email" [(ngModel)]="formData.references[2].email" name="reference3Email" />
+    </div>
+
+    <div class="section-header">Signature & Authorization</div>
+    <div class="input-header">
+      By signing this application, I certify that all information provided is true and complete to the best of my knowledge.
+      I understand that falsification of information on this application may lead to termination if employed.
+    </div>
+    <input type="text" class="text-input" placeholder="Signature" required [(ngModel)]="formData.signature" name="signature" />
+    <input type="date" class="text-input" placeholder="Date" required [(ngModel)]="formData.date" name="date" />
+
+    <div class="form-footer">
+      <button type="submit" class="submit-button">Submit</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="loading" class="loading-overlay">
+  <div class="spinner"></div>
+  <p>Submitting your application, please wait...</p>
+</div>
