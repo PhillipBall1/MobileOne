@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BackendService } from '../../../services/backend.service';
+import { BackendService } from '../../../core/services/backend.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';

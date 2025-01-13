@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { SharedService } from '../../../shared/services/shared-service.service';
-import { BackendService } from '../../../services/backend.service';
+import { BackendService } from '../../../core/services/backend.service';
 
 @Component({
   selector: 'app-locations-map',
